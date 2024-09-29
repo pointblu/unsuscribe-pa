@@ -1,0 +1,143 @@
+/* Estilos generales */
+.timeline-container {
+  width: 100%;
+  margin: 0 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem; /* Ajustar el tamaño del título */
+}
+
+.timeline {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #ddd;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Estilos para los items de la línea de tiempo */
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0; /* Items a la izquierda */
+  margin-left: -90px; /* Separación de la línea central */
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%; /* Items a la derecha */
+  margin-left: 30px; /* Separación de la línea central */
+}
+
+.timeline-item::after {
+  content: " ";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 4px solid #55f4ff;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.timeline-item:nth-child(odd)::after {
+  left: 350px;
+}
+
+.timeline-item:nth-child(even)::after {
+  left: -12px;
+}
+
+.timeline-content {
+  min-width: 300px; /* Ancho mínimo en la web */
+  max-width: 100%; /* Evita que el contenido sea mayor que el contenedor */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  font-size: 1rem; /* Ajustar el tamaño del texto en general */
+  width: calc(
+    50% - 40px
+  ); /* Ancho de los items, reduciendo espacio en los laterales */
+}
+
+.timeline-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.5rem; /* Ajustar el tamaño de los encabezados */
+}
+
+.timeline-content ul {
+  padding-left: 20px;
+}
+
+.timeline-content ul li {
+  margin-bottom: 15px;
+}
+
+/* Responsive: Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item::after {
+    left: 15px;
+    right: auto;
+  }
+
+  .timeline-item {
+    width: 100%; /* Los items ocupan el 100% en pantallas pequeñas */
+    margin: 0 0 20px 0; /* Elimina márgenes laterales */
+    left: 0;
+  }
+
+  .timeline-item:nth-child(even),
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    margin-left: 5px;
+  }
+
+  .timeline-item:nth-child(odd)::after {
+    left: 0;
+  }
+  /* Reducción de tamaño de fuente en pantallas móviles */
+  h2 {
+    font-size: 1.5rem; /* Tamaño del título en móvil */
+  }
+
+  .timeline-content {
+    min-width: 250px;
+    font-size: 0.9rem; /* Reducir el texto en general en móvil */
+  }
+
+  .timeline-content h3 {
+    font-size: 1.2rem; /* Reducir el tamaño de los encabezados en móvil */
+  }
+}
