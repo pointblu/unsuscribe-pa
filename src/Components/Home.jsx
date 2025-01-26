@@ -10,11 +10,11 @@ const Home = () => {
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">
-            ¿Cómo desuscribirse de nuestra aplicación?
+            ¿Cómo cancelar tu cuenta a nuestra aplicación?
           </h1>
           <p className="primary-text">
             Queremos asegurarnos de que tu experiencia con nosotros sea lo más
-            clara y sencilla posible. Si deseas desuscribirte de nuestra
+            clara y sencilla posible. Si deseas cancelar tu cuenta de nuestra
             aplicación, sigue estos simples pasos.
           </p>
         </div>
