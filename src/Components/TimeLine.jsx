@@ -9,8 +9,10 @@ const Timeline = () => {
             <h3>Paso 1: Contacta al administrador</h3>
             <p className="primary-text-b">
               Envía un correo electrónico a{" "}
-              <strong>puntoazulpanaderia@gmail.com</strong> solicitando que tu
-              cuenta sea desincorporada de la aplicación.
+              <strong style={{ fontSize: "12px", color: "blue" }}>
+                panaderiayreposteriamonsalve@gmail.com
+              </strong>{" "}
+              solicitando que tu cuenta sea desincorporada de la aplicación.
             </p>
           </div>
         </div>
